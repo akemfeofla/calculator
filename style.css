@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: radial-gradient(
+    circll farthest-corner at 7.2%,
+    14.6%,
+    rgba(37, 249, 245, 1) 0%,
+    rgba(8, 70, 218, 1) 90%,
+    /* rgb(156, 155, 155) 0%,
+    rgb(88, 87, 87) 90%; */
+  );
+}
+
+.calculator-gird {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(150px, auto) repeat(5, 1fr);
+  gap: 5px;
+  padding: 10px;
+  background-color: rgba(30, 149, 83, 0.15);
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.3);
+}
+
+.output {
+  grid-column: 1 / -1; /*계산식이 보여지는 영역?*/
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word; /*이거뭐지..*/
+  text-align: right;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.output div {
+  font-size: 2rem;
+}
+
+.previous-operand {
+  color: rgba(0, 0, 0, 0.5); /*계산식 작성전?*/
+}
+
+.current-operand {
+  font-weight: bold;
+}
+
+.button {
+  border: none; /*계산기 버튼*/
+  border-radius: 5px;
+  font-size: 1.6rem;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.75);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
