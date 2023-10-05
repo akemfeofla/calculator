@@ -29,13 +29,14 @@ body {
 }
 
 .output {
-  grid-column: 1 / -1; /*계산식이 보여지는 영역?*/
+  grid-column: 1 / -1; /*계산식이 보여지는 영역 처음부터 끝까지 컬럼을 다 사용하겠다. */
   background-color: rgba(255, 255, 255, 0.6);
   display: flex;
   justify-content: space-around;
   flex-direction: column;
   padding: 10px;
   word-wrap: break-word; /*이거뭐지..*/
+  word-break: break-all;
   text-align: right;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
