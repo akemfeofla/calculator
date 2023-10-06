@@ -58,8 +58,9 @@ class Calculator {
       default:
         return;
     }
-    this.currentOperand = computation;
+    // console.log(computation); 왜 더하기만 계산하지...
     this.operation = undefined;
+    this.currentOperand = computation;
     this.previousOperand = '';
   };
 
