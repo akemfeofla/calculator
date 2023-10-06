@@ -33,6 +33,9 @@ class Calculator {
     if (this.previousOperand !== '') {
       this.compute();
     }
+    this.operation = operation;
+    this.previousOperand = this.currentOperand;
+    this.currentOperand = '';
   };
 
   compute = () => {
@@ -63,7 +66,7 @@ class Calculator {
   updateDisplay = () => {
     this.currentOperandTextElement.innerText = this.currentOperand;
     this.operation
-      ? (this.previousOperandTextElement.innerText = `${this.previousOperand}${this.ioeration}`)
+      ? (this.previousOperandTextElement.innerText = `${this.previousOperand}${this.operation}`)
       : (this.previousOperandTextElement.innerText = '');
   };
 }
