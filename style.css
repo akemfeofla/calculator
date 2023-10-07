@@ -8,8 +8,9 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin: 0;
   background-image: radial-gradient(
-    circll farthest-corner at 7.2%,
+    circle farthest-corner at 7.2%,
     14.6%,
     rgba(37, 249, 245, 1) 0%,
     rgba(8, 70, 218, 1) 90%,
@@ -47,7 +48,7 @@ body {
 }
 
 .previous-operand {
-  color: rgba(0, 0, 0, 0.5); /*계산식 작성전?*/
+  color: rgba(232, 19, 19, 0.5); /*계산식 작성전 텍스트 색상*/
 }
 
 .current-operand {
@@ -70,6 +71,7 @@ body {
   transform: translateY(
     3px
   ); /*계산기 버튼에 포인터 올리면 버튼이 아래로 내려옴*/
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 .button:active {

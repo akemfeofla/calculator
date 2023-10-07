@@ -53,15 +53,16 @@ class Calculator {
       case '*':
         computation = prev * current;
         break;
-      case '/':
+      case '÷':
         computation = prev / current;
+        break;
       default:
         return;
     }
-    // console.log(computation); 왜 더하기만 계산하지...
+    this.currentOperand = computation.toString();
     this.operation = undefined;
-    this.currentOperand = computation;
     this.previousOperand = '';
+    console.log(computation);
   };
 
   updateDisplay = () => {
